@@ -1,26 +1,160 @@
 @import "vars";
 @import "global";
+@import "fonts";
 
 .header {
 	background: rgba(0, 0, 0, 0.3);
 	background-image: url(../images/header-bg.jpg);
-	height: 100%;
+	height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	position: relative;
-	
+}
+.header__menu-btn {
+	width: 35px;
+	cursor: pointer;
+	div {
+		background-color: #fff;
+		height: 4px;
+		& + div {
+			margin-top: 8px;
+		}
+	}
+}
+.header__menu-item {
+	display: none;
+	// position: relative;
+}
+.header__menu-item.active {
+	display: block;
+}
+.header__menu-item {
+	background-color: #0f0f0f;
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-width: 745px;
+	width: 100%;
+	font-family: Jura;
+	font-size: 24px;
+	line-height: 28px;
+	height: 100vh;
+	.menu__box {
+		padding-top: 120px;
+		padding-left: 150px;
+	}
+	.menu__logo {
+		background-image: url(../images/logo.png);
+		width: 204px;
+		height: 95px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		margin-bottom: 61px;
+	}
+	.nav {
+		&__list {
+			display: flex;
+			ul {
+				width: 285px;
+				li {
+					& + li {
+						margin-top: 35px;
+					}
+				}
+			}
+		}
+		&__link {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+				width: 0;
+				height: 2px;
+				background-color: #fff;
+				transition: width 0.15s;
+			}
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+			&-active {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.menu__time {
+		margin-top: 310px;
+	}
+}
+.header__menu-social {
+	position: absolute;
+	top: 0;
+	right: -254px;
+	width: 254px;
+	height: 85px;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	.menu__closed {
+		background-color: #fff;
+		width: 85px;
+		height: 85px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url(../images/cancel.svg);
+			width: 50px;
+			height: 50px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.menu__instagram {
+		position: relative;
+		left: 40px;
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url(../images/instagram.svg);
+			width: 35px;
+			height: 30px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.menu__vkontakte {
+		position: relative;
+		left: 125px;
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url(../images/vk.svg);
+			width: 45px;
+			height: 40px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
 }
 .header__inner {
-	top: 75px;
-	right: 142px;
+	padding-top: 75px;
 	display: flex;
 	justify-content: space-between;
-	position: absolute;
-	opacity: 1;
+	align-items: center;
 }
 .header__phone {
-	font-family: Forum;
+	font-family: "Forum", cursive;
 	font-size: 24px;
 	line-height: 26px;
 	color: #ffffff;
@@ -29,10 +163,169 @@
 	background: #ffffff;
 	box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.48);
 	border-radius: 10px;
-	font-family: Forum;
+	font-family: "Forum", cursive;
 	font-size: 24px;
 	line-height: 26px;
 	color: #000000;
 	padding: 28px 52px 31px;
-	margin-left: 41px;
+	margin-left: 25px;
 }
+.header__title {
+	font-family: "Forum", cursive;
+	padding-top: 190px;
+	margin: auto 0;
+	padding-left: 190px;
+}
+.header__logo {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 176px;
+	height: 86px;
+	margin-bottom: 35px;
+}
+.header__text {
+	font-size: 72px;
+	line-height: 79px;
+	width: 500px;
+	color: #ffffff;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header__bottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.header__bottom-link {
+	margin: 0 auto;
+	font-size: 36px;
+	line-height: 43px;
+	color: #ffffff;
+	text-align: center;
+	border: 2px solid #ffffff;
+	border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+	width: 200px;
+	height: 100px;
+	padding: 35px;
+}
+
+// start about
+.about {
+	padding: 200px 0 0;
+}
+.about__item {
+	margin-bottom: 170px;
+	padding: 121px 0 205px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.about__box {
+	max-width: 644px;
+	position: relative;
+}
+.about__box-title {
+	margin-bottom: 18px;
+}
+.about__box-text {
+}
+
+// end about
+
+// start advantage
+.advantage__inner {
+}
+.advantage__title {
+	margin-bottom: 92px;
+}
+.advantage__box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 156px;
+}
+.advantage__item {
+	padding: 40px;
+	width: 472px;
+	border: 7px solid #ffffff;
+	box-sizing: border-box;
+	box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.61);
+	border-radius: 10px;
+	margin-bottom: 80px;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		border: 4px solid #ffffff;
+		border-radius: 4px;
+		box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.61);
+	}
+	&::before {
+		width: 30px;
+		top: -7px;
+		left: -30px;
+	}
+	&::after {
+		height: 30px;
+		top: -30px;
+		left: -7px;
+	}
+}
+// end advantage
+
+// start programs
+.programs__item {
+	background-repeat: no-repeat;
+	background-position: right;
+	margin: 100px 50px 200px;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -100px;
+		height: 10px;
+		width: 1577px;
+		left: -110px;
+		background: #fff;
+		box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.48);
+		border-radius: 3px;
+	}
+}
+.programs__item:nth-last-child(1)::before{
+	content: '';
+	background:transparent;
+	box-shadow: none;
+}
+.programs__item:nth-child(even) {
+	background-position: left;
+}
+.programs__item:nth-child(even) .programs__box {
+	margin-left: auto;
+}
+.programs__title {
+}
+.programs__box {
+	padding: 22px 0;
+	max-width: 668px;
+}
+.programs__border {
+	margin: 0 -105px;
+}
+.programs__item-title {
+	margin-bottom: 25px;
+}
+.programs__item-text {
+	margin-bottom: 46px;
+}
+.programs__item-box {
+	display: flex;
+	.programs__item-btn:first-child {
+		margin-right: 30px;
+		background-color: #fff;
+		color: #131313;
+	}
+}
+// end programs

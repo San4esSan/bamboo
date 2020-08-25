@@ -58,7 +58,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function(){											//дорагуша 
-	gulp.watch('app/scss/style.scss', gulp.parallel('sass'))		//следи за файлом style.scss, и если произошли изменения запускай таск sass
+	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))		//следи за файлом style.scss, и если произошли изменения запускай таск sass
 	gulp.watch('app/*.html', gulp.parallel('html'))					//следи за всеми файлами .html, и если произошли изменения запускай таск html
 	gulp.watch('app/js/*.js', gulp.parallel('js')) 					//следи за всеми файлами .js, и если произошли изменения запускай таск js
 });

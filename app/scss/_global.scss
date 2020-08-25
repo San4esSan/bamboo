@@ -11,7 +11,7 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
-img{
+img {
 	max-width: 100%;
 }
 a {
@@ -25,24 +25,59 @@ li {
 	padding: 0;
 	list-style: none;
 }
-// body {
-// 	font-family: "Quicksand", sans-serif;
-// 	font-size: 15px;
-// 	line-height: 24px;
-// 	background-color: var(--color-white);	
-// }
+body {
+	font-family: 'Jura', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	color: #fff;
+	background-color: #131313;
+}
+
+// font-family: 'Forum', cursive;
+// font-family: 'Jura', sans-serif;
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
 }
 .container {
-	max-width: 1596px;
+	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+.container-content{
+	max-width: 1460px;
+	margin: 0 auto;
+}
 .content {
 	flex: 1 0 auto;
+}
+.title{
+	font-family: 'Forum', cursive;
+	font-weight: normal;
+	font-size: 72px;
+	line-height: 79px;
+	text-align: center;
+}
+.title-content{
+	font-family: 'Forum', cursive;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 53px;
+}
+.item-btn{
+	font-family: 'Forum', cursive;
+	font-size: 26px;
+	padding: 24px 53px;
+	border: 3px solid #fff;
+	border-radius: 10px;
+}
+.border-white{
+	height: 10px;
+	background: #fff;
+	box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.48);
+border-radius: 3px;
 }
 .footer {
 	flex: 0 0 auto;
