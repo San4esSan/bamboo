@@ -22,7 +22,10 @@ gulp.task('style', function(){
 	return gulp.src([
 		'node_modules/normalize.css/normalize.css', 							//бери данный файл
 		'node_modules/slick-carousel/slick/slick.css',						//бери данный файл
-		'node_modules/magnific-popup/dist/magnific-popup.css'				//бери данный файл
+		'node_modules/magnific-popup/dist/magnific-popup.css',				//бери данный файл
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.css',				//бери данный файл
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'				//бери данный файл
+		
 	])
 	.pipe(concat('libs.min.css'))													//и объединяй их в этом файле	
 	.pipe(cssmin())																	//минифицуруй его
@@ -32,7 +35,8 @@ gulp.task('style', function(){
 gulp.task('script', function(){
 	return gulp.src([
 		'node_modules/slick-carousel/slick/slick.js',						//бери данный файл
-		'node_modules/magnific-popup/dist/jquery.magnific-popup.js'		//бери данный файл
+		'node_modules/magnific-popup/dist/jquery.magnific-popup.js',		//бери данный файл
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.js'		//бери данный файл
 	])
 	.pipe(concat('libs.min.js'))													//и объединяй их в этом файле
 	.pipe(uglify())																	//минифицуруй его

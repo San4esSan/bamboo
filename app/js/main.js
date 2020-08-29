@@ -10,6 +10,7 @@ $(function () {
 		$('.header__box').slideToggle();
 	})
 
+	$('select').styler();
 
 	$('.gallery__slider').slick({
 		infinite: true,
@@ -24,11 +25,7 @@ $(function () {
 	$('.comment__slider').slick({
 		dots: true,
 		infinite: true,
-		// fade: true,
 		autoplay: 3000,
-
-
-
 		prevArrow: '<button type="button" class="slick-arrow click-next"><img src="images/arrow-left-dark.svg" alt=""></button>',
 		nextArrow: '<button type="button" class="slick-arrow click-prev "><img src="images/arrow-right-dark.svg" alt=""></img></button>',
 
