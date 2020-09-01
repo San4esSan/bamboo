@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Bamboo</title>
 	<link href="https://fonts.googleapis.com/css2?family=Forum&family=Jura:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -75,6 +75,7 @@
 
 		</div>
 	</section>
+
 	<section class="advantage">
 		<div class="container">
 			<div class="advantage__title title">Преимущества</div>
@@ -124,10 +125,11 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="programs">
 		<div class="container-content">
 			<div class="programs__title title">Наши программы</div>
-			<div class="programs__item" style="background-image: url(../images/prog1.png);">
+			<div class="programs__item">
 				<div class="programs__box">
 					<div class="programs__item-title title-content">Коррекция фигуры</div>
 					<div class="programs__item-text">Корректирующие разминания для тех, кто заботится о своей фигуре.
@@ -137,8 +139,12 @@
 						<div class="programs__item-btn item-btn"><a href="#">Подробнее</a> </div>
 					</div>
 				</div>
+				<div class="programs__item-img">
+					<img src="images/prog1.png" alt="">
+				</div>
 			</div>
-			<div class="programs__item" style="background-image: url(../images/prog2.png);">
+
+			<div class="programs__item">				
 				<div class="programs__box">
 					<div class="programs__item-title title-content">Классические массажы</div>
 					<div class="programs__item-text">Комплексное оздоровление и повышение
@@ -148,9 +154,12 @@
 						<div class="programs__item-btn item-btn"><a href="#">Подробнее</a> </div>
 					</div>
 				</div>
+				<div class="programs__item-img">
+					<img src="images/prog2.png" alt="">
+				</div>
 			</div>
 
-			<div class="programs__item" style="background-image: url(../images/prog3.png);">
+			<div class="programs__item">				
 				<div class="programs__box">
 					<div class="programs__item-title title-content">Spa программы</div>
 					<p class="programs__item-text">Мы предлагаем Spa-процедуру, которая включает в себя общий массаж всего
@@ -160,8 +169,12 @@
 						<div class="programs__item-btn item-btn"><a href="#">Подробнее</a> </div>
 					</div>
 				</div>
+				<div class="programs__item-img">
+					<img src="images/prog3.png" alt="">
+				</div>
 			</div>
-			<div class="programs__item" style="background-image: url(images/prog4.png);">
+
+			<div class="programs__item">				
 				<div class="programs__box">
 					<div class="programs__item-title title-content">Массаж лица</div>
 					<p class="programs__item-text">Специалист делает ручной массаж лица клиенту. При этом он воздействует
@@ -170,6 +183,9 @@
 						<div class="programs__item-btn item-btn"><a href="#">Записаться</a> </div>
 						<div class="programs__item-btn item-btn"><a href="#">Подробнее</a> </div>
 					</div>
+				</div>
+				<div class="programs__item-img">
+					<img src="images/prog4.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -196,6 +212,7 @@
 			<img class="gallery__img" src="images/gallery1.png" alt="">
 		</div>
 	</section>
+
 	<section class="certificate">
 		<div class="container-content">
 			<div class="certificate__title title">Сертификаты</div>
@@ -237,7 +254,7 @@
 							</div>
 							<div class="form__item">
 								<p class="form__title">Вид</p>
-								<select>
+								<select class="form__item-select">
 									<option>Релакс</option>
 									<option>Спа программы</option>
 									<option>Коррекция фигуры</option>
@@ -249,7 +266,7 @@
 							<p class="form__title">Количество</p>
 							<div class="form__number">- 1 +</div>
 							<p class="form__title">Время</p>
-							<select>
+							<select class="form__item-select">
 								<option>30 мин</option>
 								<option>40 мин</option>
 								<option>50 мин</option>
@@ -269,7 +286,7 @@
 			</div>
 			<p class="form__or">или</p>
 			<div class="form__subscription">
-				<div class="form__section">
+				<div class="form__section form__section-sub">
 					<form action="/">
 						<h3 class="form__subscription-title">
 							Подобрать абонемент
@@ -300,17 +317,21 @@
 						</div>
 						<div class="form__subscription-box">
 							<div class="form__fullname">
-								<p  class="form__title">
+								<p class="form__title">
 									ФИО
 								</p>
-								<input type="text" name="ФИО" placeholder="Мурсалов Мурсал">
+								<input class="form__fullname-input" type="text" name="ФИО" placeholder="Мурсалов Мурсал">
+							</div>
+							<div class="form__fullname">
+								<p class="form__title">
+									Телефон
+								</p>
+								<input class="form__phone" type="tel" name="phone" pattern="[+]{1}[0-9]{11,14}"
+									value="+7 (900) 000 00-00" required>
 							</div>
 							<button class="form__checkout">Оформить абонемент</button>
 							<div class="form__cost">1500 руб</div>
 						</div>
-
-
-
 						<p class="form__subscription">Абонемент на 5 сеансов действует 90 дней, на 10 сеансов - 90 дней</p>
 					</form>
 				</div>
@@ -390,6 +411,30 @@
 		</div>
 	</section>
 
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__info">
+					<a href="#" class="footer__logo header__logo" aria-label="logo"></a>
+					<div class="footer__content-title">Отдыхай, расслабляясь телом и душой</div>
+					<a class="footer__content-phone" href="tel:+73433282297">+7 (343) 328-22-97</a>
+					<a class="footer__content-phone" href="tel:+79221882297">+7 (922) 188-22-97</a>
+					<a class="footer__content-address">ул. Белинского, 108, Екатеринбург </a>
+					<div class="footer__social">
+						<div class="social-vk"><a class="footer__social-vk"></a></div>
+						<div class="social-instagram"><a class="footer__social-instagram"></a></div>
+
+					</div>
+				</div>
+				<div class="footer__map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2183.530958492186!2d60.616068115972304!3d56.81967948085216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16ebff7114d5d%3A0x4cd13a4277976f93!2z0YPQuy4g0JHQtdC70LjQvdGB0LrQvtCz0L4sIDEwOCwg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjIwMDI2!5e0!3m2!1sru!2sru!4v1598810716917!5m2!1sru!2sru"
+						height="752px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+						tabindex="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 
