@@ -10,6 +10,13 @@ $(function () {
 		$('.header__box').slideToggle();
 	})
 
+	$('.popup-btn').on('click', function () {
+		$('.popup__detailed').slideToggle();
+	})
+
+	$('.popup__close, .btn-closed').on('click', function () {
+		$('.popup__detailed').slideToggle();
+	})
 	$('select').styler();
 
 	$('.gallery__slider').slick({
@@ -19,7 +26,7 @@ $(function () {
 		centerMode: true,
 		variableWidth: true,
 		prevArrow: '<button type="button" class="slick-arrow click-next"><img src="images/arrow-left.svg" alt=""></button>',
-		nextArrow: '<button type="button" class="slick-arrow click-prev "><img src="images/arrow-right.svg" alt=""></img></button>',		
+		nextArrow: '<button type="button" class="slick-arrow click-prev "><img src="images/arrow-right.svg" alt=""></img></button>',
 	});
 
 	$('.comment__slider').slick({
